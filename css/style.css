@@ -1,0 +1,474 @@
+body{
+    margin: 50px; 
+    min-width: 370px;
+}
+.container{
+    background-color: black;
+    width: auto;
+    height: auto;
+    margin: 40px 0px;
+    padding: 40px;
+}
+
+.container:last-child{
+    padding: 0px;
+}
+
+.flexcontainer{
+    display: flex;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexcontainer.header{
+    flex-wrap: nowrap;
+}
+
+.flex-item{
+    flex-basis: auto;
+    width: 315px;
+    height: 40px;
+    margin: 40px;
+}
+
+.grow{
+    flex-grow: 2;
+    margin: 0px;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.flexcontainer.c2{
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.flexcontainer.c4{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+/*colors*/
+.c1 .flex-item{
+    background-color: rgb(234,88,75);
+}
+
+.c2 .flex-item{
+    background-color: rgb(255,204,94);
+    width: 100%;
+}
+
+.c3 .flex-item{
+    background-color: rgb(22,100,164);
+    margin: 40px 0 0 40px;
+    flex-grow: 1;
+}   
+
+.c4 .flex-item{
+    background-color: rgb(255,227,128);
+    width: 100%;
+    margin: 40px 40px 20px 40px;
+}
+
+.ico .flex-item{
+    background-color: transparent;
+    width: 160px;
+    margin: 20px 40px 20px 0px;
+}
+
+.ico .flex-item:last-child{
+    margin-top: 0px;
+}
+
+.c4 .flex-item:last-child{
+    margin-top: 0px;
+}
+
+.c3 .flex-item:last-child{
+    width: 100%;
+    margin: 40px 0px 40px 40px;
+}
+
+.c1{
+    background-color: rgb(39,57,78);
+}
+
+.c2{
+    background-color: rgb(240,118,58);
+}
+
+.c3{
+    background-color: rgb(39,57,78);
+    flex-basis: 60%;
+    padding-right: 40px;
+}
+
+.c3 .flex-item:last-child{
+    background-color: rgb(99,153,187);
+}
+
+.c4{
+    background-color: rgb(240,118,58);
+    /* flex-basis: 40%; */
+}
+
+.c5 .flex-item {
+    background-color: rgb(228,164,52);
+    width: 100%;
+}
+
+.container.c6{
+    background-color: rgb(215,215,215);
+    padding: 10px;
+}
+
+.flexcontainer.c7 {
+    /* background-color: rgb(233,233,233); */
+    justify-content: space-between;
+}
+
+.c7 .flexcontainer {
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.c7 .flexcontainer:first-child{
+ justify-content: space-between;
+}
+
+.c7 .flex-item {
+    margin: 0px;
+}
+
+.flexcontainer:last-child{
+    margin-bottom: 0px;
+    align-items: flex-start;
+}
+
+.flex-item.article{
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    border: solid 10px rgb(233,233,233);
+}
+
+.flex-item.article:first-child{
+    margin-right: 10px;
+}
+
+.article.japan_1{
+    background-image: url(../img/japan-1.jpg);
+    
+}
+
+.article.japan_2{
+    background-image: url(../img/japan-2.jpg);
+}
+
+article{
+
+    /* position: relative; */
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+article .content {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    min-height: 119px;
+  }
+
+article .content .title{
+background-color: indianred;
+padding-left: 10px;
+}
+
+article .content .description{
+    padding: 10px;
+}
+
+article h2{
+    text-transform: uppercase;
+    color: white;
+    margin: 0px;
+    height: 23px;
+}
+
+article .data{
+    color: white;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+
+/*Media Queries*/
+/* Medium screens */
+@media (max-width: 1363px) {
+    .container {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .medium{
+        background-color: rgb(255,247,52);
+    }
+
+    .c3{
+        flex-basis: 100%;
+        padding-right: 20px;
+    }
+
+    .c3 .flex-item {
+        margin: 20px 0 0 20px;
+    }
+
+    .c3 .flex-item:last-child{
+        margin: 20px 0px 20px 20px;
+    }
+
+    .flexcontainer.c1{
+        flex-flow: row;
+    }
+
+    .flexcontainer.c4 {
+        margin-top: 20px;
+        margin-left: 0px;
+        flex-grow: 1;
+    }
+
+    .flex-item.logo_img{
+        width: 100px;
+    }
+
+    .flex-item{
+        margin: 20px;
+        height: 20px;
+    }
+
+    .ico .flex-item {
+        width: 100px;
+    }
+
+    .c4 .flex-item{
+        margin: 20px 20px 10px 20px;
+    }
+
+    .c4 .flex-item:last-child{
+        margin-bottom: 20px;
+    }
+
+  }
+
+  /* Medium screens */
+@media (max-width: 840px) {
+    .container {
+        justify-content: space-around;
+        padding: 30px;
+        margin: 30px 0;
+    }
+    .flex-item{
+        height: 30px;
+        margin: 30px 30px 0px 30px;
+    }
+
+    p.main_title {
+        margin-top: 6em!important;
+        font-size: 1.5em!important;
+        }
+
+    .ico .flex-item {
+        width: 0px;
+        /* height: 0px; */
+    }
+
+    .c1 .flex-item {
+        width: 100%;
+    }
+
+    .flexcontainer.c1 {
+        flex-flow: row wrap;
+    }
+
+    .flexcontainer.c4 {
+        margin-top: 30px;
+    }
+
+    .c3 {
+        flex-basis: 100%;
+        padding-right: 0px;
+    }
+
+    .c3 .flex-item {
+        width: 100%;
+        margin: 30px 30px 0 30px;
+    }
+
+    .c3 .flex-item:last-child {
+        margin: 30px;
+    }
+
+    .flex-item .logo_img{
+        margin: 0px;    
+    }    
+    .flex-item:last-child {
+        margin: 30px;
+    }
+
+    .flex-item.article:first-child {
+        margin-right: 0px;
+    }
+
+    .header .flex-item:last-child{
+        margin: 0px;
+    }
+
+    .c4 .flex-item:last-child {
+        margin: 0px 20px 20px 20px;
+    }
+
+    .c7 .flexcontainer{
+        flex-wrap: wrap;
+    }
+    .c7 .flex-item:last-child {
+        margin: 0px;
+    }
+  }
+
+  /* Others Medium screens */
+@media (max-width: 655px) {
+  .header_img {
+    background-position-y: 50%!important;
+    }
+}
+
+  /* small minimal screens */
+@media (max-width: 370px)
+{
+    .flex-item.logo_img {
+        width: 35px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .flexcontainer.column.ico{
+        position: absolute;
+        right: 0px;
+        top: 15px;
+        padding: 0px;
+    } 
+}
+
+/**************************************************/
+   p.main_title{
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2em;
+    color: rgb(243 113 109 / 58%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  /***********************************************/
+  /* N A V - B A R */
+  /***********************************************/
+  /* Large */
+.navigation {
+     display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    background: none;
+    flex-grow: 1;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+
+  ul li{
+    margin-right: 10px;
+  }
+
+  li i{
+      margin-right: 5px;
+  }
+  
+  /* Medium screens */
+  @media all and (max-width: 800px) {
+    .navigation {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+  }
+  
+  /* Small screens */
+  @media all and (max-width: 500px) {
+    .navigation {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+
+  .header_img{
+    background-image: url(../img/header_img.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 520px;
+    background-position: center;
+    position: relative;
+    background-position-y: 65%;
+  }
+
+  .logo_img{
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    height: 131px;
+    background-position: center;
+    position: relative;
+    margin: 0px;
+    background-size: contain;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: rgb(117,117,117);
+  }
+  
+  .navigation a:hover {
+    background: #b2b3b4;
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
